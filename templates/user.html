@@ -1,0 +1,123 @@
+{% load static %}
+{% static "images" as baseUrl%}
+<!doctype html>
+                        <html>
+                            </script>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Snippet - BBBootstrap</title>
+                                <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='' rel='stylesheet'>
+                                <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <style>body {
+    background: rgb(99, 39, 120)
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}</style>
+                                </head>
+                                <!-- <body oncontextmenu='return false' class='snippet-body'> -->
+                                <div class="container rounded bg-white mt-5 mb-5">
+<form action="update" method="POST" enctype="multipart/form-data" >{% csrf_token %}                                
+    <div class="row">{% for i in  details   %}
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">{% if i.img %}<img  class="rounded-circle mt-5" name="img" width="150px" src="{{i.img.url}}" alt="image">{% endif %}{% if user.is_authenticated %}<span class="font-weight-bold"><label   name="username1" value="{{user.username}}">{{user.username}}</label></span>{% endif %}<span class="text-black-50">{{user.email}}</span><span> </span></div>
+        <a  class="d-flex flex-column align-items-center text-center p-3 py-5" href="logout">LogOut</a>
+        <a  class="d-flex flex-column align-items-center text-center p-3 py-5" href="cuser">Complaints</a>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                
+                <div class="row mt-2">
+                    
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" name="first_name" value="{{i.first_name}}"style="text-transform:uppercase"></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" name="last_name" value="{{i.last_name}}"style="text-transform:uppercase" ></div>
+                </div>
+                <div class="row mt-3">
+                
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" name="phone_no" value="{{i.phone_no}}" max="10"></div>
+                    <div class="col-md-12"><label class="labels">plf_no</label><input type="text" class="form-control" name="" value="{{i.username}}" readonly style="text-transform:uppercase"></div>
+                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" name="email" value="{{i.email}}"></div>
+                    <div class="col-md-12"><label class="labels">DOB</label><input type="date" class="form-control" name="dob" value="{{i.dob}}" ></div>
+                    <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" name="state" value="{{i.state}}" style="text-transform:uppercase"></div>
+                    <div class="col-md-12"><label class="labels">District</label><input type="text" class="form-control" name="district" value="{{i.district}}" style="text-transform:uppercase"></div>
+                    <div class="col-md-12"><label class="labels">Pincode</label><input type="text" class="form-control" name="pincode" value="{{i.pincode}}"></div>
+                    <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" name="address" value="{{i.address}}" style="text-transform:uppercase"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Father_name</label><input type="text" class="form-control" name="fathername" value="{{i.fathername}}" style="text-transform:uppercase"></div>
+                    <div class="col-md-6"><label class="labels">Mother_name</label><input type="text" class="form-control" name="mothername" value="{{i.mothername}}" style="text-transform:uppercase"></div>
+                    <div class="col-md-6"><label class="labels">Guardian_name</label><input type="text" class="form-control" name="guardianname" value="{{i.guardianname}}" style="text-transform:uppercase"></div>
+                    <div class="col-md-6"><label class="labels">Parent_email</label><input type="text" class="form-control" name="parent_email" value="{{i.parent_email}}"></div>
+                    <div class="col-md-6"><label class="labels">Parent_no</label><input type="text" class="form-control" value="{{i.parent_no}}" name="parent_no"></div>
+                    <div class="col-md-6">Profile<input type="file" name="img" ></div>
+                </div>
+                
+                
+                {% endfor %}
+                <div class="mt-5 text-center"><button action="update" class="btn btn-primary profile-button" type="Submit">Save Profile</button></div>
+
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span>Edit </span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Edit</span></div><br>
+                {% for i in  details   %}          <div class="col-md-12"><label class="labels">Hostel Room.no</label><input type="text" class="form-control" placeholder="experience" value="{{i.room_no}}"readonly></div> <br>{% endfor %}
+                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+</div>
+                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>
+                                <script type='text/javascript' src=''></script>
+                                <script type='text/javascript' src=''></script>
+                                <script type='text/Javascript'></script>
+                                
+                            </body>
+                            </html>

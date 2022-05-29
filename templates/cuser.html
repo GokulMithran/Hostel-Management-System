@@ -1,0 +1,74 @@
+{% load static %}
+{% static "images" as baseUrl%}
+
+<!DOCTYPE html>
+<html lang="en" style="background-image: url({% static 'assets/img/cuser/ch.jpg' %})">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact Form HTML/CSS Template - reusable form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        
+        <link rel="stylesheet" href="{% static 'assets/css/form.css' %}" >
+        
+        
+        <!-- <script src="form.js"></script> -->
+    </head>
+    
+    <body >
+        
+        
+        <div class="container">
+            <div id="form-main">
+                <div id="form-div">
+                    
+                    <h1>COMPLAINT</h1>
+                    <form class="montform" action="csend" method="POST" id="reused_form">{% csrf_token %}
+                        
+                        {% for i in details %}
+                                                <p class="plf" >
+                                                    <label for="" >PLF_NO</label>
+                                                    <input name="plf_no" type="text" required class="feedback-input" value="{{i.username}}"id="plf" placeholder="" readonly />
+                                                </p>
+                                                <p class="room">
+                                                    <label for="">ROOM_NO</label>
+                                                    <input name="room_no" type="text" required class="feedback-input" value="{{i.room_no}}" id="room" readonly placeholder="Enter Your Room Number" />
+                                                    <p class="date">
+                                                        <label for="">DATE OF COMPLAINT</label>    
+                                                        <input name="doc" type="date" required class="feedback-input" id="date" placeholder="Date of Complaint" />
+                                                    </p>
+                                                    <p class="text">
+                                                        <label for="">MESSAGE</label>   
+                                                    <!-- <input type="text" name="desc" class="feedback-input"  placeholder="Place Your Complaints Here!!!" /> -->
+                                                    <textarea name="desc" id="" cols="30" rows="10"></textarea>
+                                                </p>
+                                                <div class="send">
+                                                <div style="text-align:center">  
+                                                    <button type="submit" >Send</button> 
+                                                </div>
+                                                    <div class="ease"></div>
+                                            
+                                                
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+                          
+                        
+                    </form>{% endfor %}
+                    <div id="error_message" style="width:100%; height:100%; display:none; ">
+                        <h4>
+                            Error
+                        </h4>
+                        Sorry there was an error sending your form. 
+                    </div>
+                    <div id="success_message" style="width:100%; height:100%; display:none; "> <h2>Success! Your Message was Sent Successfully.</h2> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

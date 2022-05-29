@@ -1,0 +1,361 @@
+{% load static %}
+{% static "images" as baseUrl%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Hostel Management System - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %} " rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.7.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">Sailor</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+       <a href="index.html"  class="logo me-auto"><img src="{% static 'assets/img/mcet_tran.png' %}" alt="mcet logo " class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar" >
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
+
+              
+            </ul>
+          </li>
+          <li><a href="#"></a></li>
+          <li><a href="#">Admission</a></li>
+          <li><a href="#">Payments</a></li>
+          <li><a href="accounts/clogin">Complaints</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown"><a href="#" class="getstarted dropdown"  >Login <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="accounts/login">User</a></li>
+              <li><a href="accounts/login1">Admin</a></li>
+              <li><a href="accounts/register">Register</a></li>
+              <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
+                          </ul>
+          
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/ci1.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MCET</span></h2>
+              <p class="animate__animated animate__fadeInUp">Dr. Mahalingam College of Engineering and Technology (MCET) is a self – financing educational institution situated in Pollachi, Coimbatore District. MCET is the vision of Arutchelvar Dr. N. Mahalingam, whose determination and dynamism made possible the realization of this institution of excellence. MCET was established in 1998 to commemorate the 75th Birthday of this great visionary.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/c2i.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">About Our Hostel</h2>
+              <p class="animate__animated animate__fadeInUp">A well furnished hostel is available for men and women separately. It can accommodate 1410 men and 714 women students. Single, double and multi member rooms are available in the hostel. The rooms are well furnished and facilities like fan, tube light, cupboard etc., are provided for the comfortable living to the residents. Vegetarian food, on dividing basis is made available in the mess with modern kitchen and furnished dining hall. Facilities like Internet browsing, Library and Reading room, Medical Facilities, Laundry, Hair Dressing facilities, Inbuilt Canteen, Xerox Centre etc. are available for the convenience of the students staying in the hostel. The Hostel administration is carried out by the Warden with the assistance of a Deputy Warden. Resident proctors are available for guidance and counseling to the students.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/c6i.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Management</h2>
+              <p class="animate__animated animate__fadeInUp">The dream was cherished with the incorporation of Nachimuthu Polytechnic College in 1957 through which 120 rural students were made competent enough to work with modern technology.As he had a better understanding of the need of the hour Arutchelvar Dr. N. Mahalingam was prompted to pioneer with technical education rather than starting a school.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> 
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Dr.Mahalingam College of Engineering and Technology</h2>
+            <!-- <h3>Hostel Facilities</h3> -->
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <!-- <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum
+            </p> -->
+            <h1>Hostel Facilities</h1>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Hostels are in reachable distance from classrooms and sports facilities, to support the ease in mobility.</li>
+              <li><i class="ri-check-double-line"></i> Students going for outing should return to hostel by 8.30 P.M</li>
+              <li><i class="ri-check-double-line"></i> 24 Hours medical facility is available in the Hostel</li>
+            </ul>
+            <p class="fst-italic">
+              Students are hereby informed to take care of their personal belongings carefully. Management is not responsible for the loss of any valuable things of the students in the Hostel
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+   <!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box">
+              <i class="bi bi-briefcase"></i>
+              <h4><a href="#">Administration</a></h4>
+              <p>The Hostel administration is carried out by the Warden with the assistance of a Deputy Warden. Resident proctors are available for guidance and counseling to the students.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-card-checklist"></i>
+              <h4><a href="#">Health</a></h4>
+              <p>Dedicated fitness centres are available for boys and girls, which are in close proximity to the hostels.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-bar-chart"></i>
+              <h4><a href="#">Internet Browsing</a></h4>
+              <p>Our College  provides free  Internet Browsing for Hostel Students </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-binoculars"></i>
+              <h4><a href="#">Availability</a></h4>
+              <p>A well furnished hostel is available for men and women separately. It can accommodate 1410 men and 714 women students. Single, double and multi member rooms are available in the hostel.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-brightness-high"></i>
+              <h4><a href="#">Magni Dolore</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-calendar4-week"></i>
+              <h4><a href="#">Food Facility</a></h4>
+              <p>We sheduling hygenic and Nutritional food for students and non-veg is prohibted in our campus</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+  <!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>MCET</h3>
+              <p>
+                Mackkinaickenpatti (POST),
+                Udumalai Road, Pollachi-642003,
+                Coimbatore, Tamilnadu<br><br>
+                <strong>Phone:</strong> +91 4259-236030<br>
+                <strong>Email:</strong> principal@drmcet.ac.in<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Other Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Academic Calendar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Mandatory Disclosure</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Certificate Verification</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Online Fees Payment</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">CPG – Online Test</a></li>
+            </ul>
+          </div>
+
+          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MCET</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+        
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <div class="modal fade" id="register_online" data-backdrop="static" data-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" style="width: 400px;">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">User Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="custom-divider"></div>
+          <div class="modal-body">
+              <form>
+                  <div class="mb-3">
+                      <label class="form-label">username</label>
+                      <input type="text" name="u_name" class="form-control" placeholder="username" required>
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label">password</label>
+                      <label class="form-label float-right"><a href="forgot.html">Forgot
+                              password</a></label>
+                      <input type="password" name="u_pass" class="form-control" placeholder="password" required>
+                  </div>
+                  <div class="mb-3">
+                      <input type="submit" value="login" class="btn btn-block btn-primary" name="login">
+                  </div>
+
+              </form>
+          </div>
+
+          <div class="modal-footer justify-content-center">
+              <h6>Don't Have An Acccount?<a href="accounts/login">Create NewOne</a></h6>
+          </div>
+
+
+      </div>
+  </div>
+</div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

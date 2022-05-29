@@ -1,0 +1,188 @@
+
+
+/*General */
+html{    
+  background: url("static/img/cuser/ch.jpg")  no-repeat;
+  background-size: cover;
+  height:100%;
+}
+
+
+/* body
+{
+	background: red url("static/img/cuser/ch.jpg")  no-repeat;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+} */
+
+#feedback-page{
+	text-align:center;
+}
+
+
+#form-main{
+	width:100%;
+	float:left;
+	padding-top:0px;
+	height: auto;
+}
+
+#form-div {
+	background-color:rgba(72,72,72,0.4);
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:50px;
+	width: 450px;
+	float: left;
+	left: 50%;
+	position: absolute;
+  margin-top:30px;
+	margin-left: -260px;
+  border-radius: 7px;
+  color: black;
+  height: fit-content;
+}
+
+.montform .feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+}
+/*Inputs styles*/
+.montform .feedback-input:focus{
+	background: #fff;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+
+/* Icons ---------------------------------- */
+
+
+.montform  #plf{
+	background-image: url();
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.montform  #plf:focus{
+	background-image: url(file:///C:/Users/JEEVASUDHARSAN/OneDrive/Desktop/New%20folder/images/id-card-svgrepo-com.svg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.montform  #date{
+	background-image: url(file:///C:/Users/JEEVASUDHARSAN/OneDrive/Desktop/New%20folder/images/notes-svgrepo-com.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.montform  #date:focus{
+	background-image: url(file:///C:/Users/gokul/hms/mini/static/img/cuser/notes-svgrepo-com.svg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.montform  #room{
+	background-image: url(file:///C:/Users/JEEVASUDHARSAN/OneDrive/Desktop/New%20folder/images/hotel-room-svgrepo-com.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.montform  #room:focus{
+	background-image: url(file:///C:/Users/JEEVASUDHARSAN/OneDrive/Desktop/New%20folder/images/hotel-room-svgrepo-com.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.montform  #comment{
+	background-image: url(file:///C:/Users/JEEVASUDHARSAN/OneDrive/Desktop/New%20folder/images/message-mails-svgrepo-com.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.montform  textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+.montform  input:hover, .montform  textarea:hover,
+.montform  input:focus, .montform  textarea:focus {
+	background-color:#e6e6e6;
+}
+
+.send{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float: center;
+	width: auto;
+	height: auto;   
+}
+
+.button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+	
+.montform  .send:hover {
+	color: #3498db;
+}
+	
+
+
+/*Styles for small screens*/
+
+@media  only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+body{
+	background-color: gainsboro;
+}
+.bx{
+   box-shadow: 2px 2px 18px rgba(0,0,0,0.3);
+}
+.sak{
+   padding-left: 126px;
+   
+}
+.crd{
+   box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+   border: 0px;
+}
+.butn{
+   width:100%;
+  
+}
+
+h5{
+	font-size: 24px;
+}
+

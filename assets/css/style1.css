@@ -1,0 +1,18 @@
+body{
+     background-color: gainsboro;
+}
+.bx{
+    box-shadow: 2px 2px 18px rgba(0,0,0,0.3);
+}
+.sak{
+    padding-left: 126px;
+    
+}
+.crd{
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+    border: 0px;
+}
+.butn{
+    width:100%;
+   
+}
