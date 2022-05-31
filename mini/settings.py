@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 import django_heroku
 import dj_database_url
-from decouple import config
+#from decouple import config
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -127,16 +127,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-MEDIA_URL='/media/'
-STATIC_URL = '/static/'
+#MEDIA_URL='/media/'
+#STATIC_URL = '/static/'
 
 
-STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'static')
-]
-STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT=os.path.join(BASE_DIR,'assets')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+#STATICFILES_DIRS=[
+#    os.path.join(BASE_DIR,'static')
+#]
+#STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+STATIC_URL = "/static/"
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # STATIC_ROOT =os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
